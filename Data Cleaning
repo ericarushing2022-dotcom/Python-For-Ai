@@ -1,0 +1,12 @@
+import pandas as pd
+
+# Load a CSV file
+df = pd.read_csv("sample_data.csv")
+
+# Remove rows with missing values
+clean_df = df.dropna()
+
+# Save cleaned data
+clean_df.to_csv("cleaned_data.csv", index=False)
+
+print("Data cleaned successfully!")
